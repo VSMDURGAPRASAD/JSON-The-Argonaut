@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSON_The_Argonaut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alo-Zt-Sie">
+                                <rect key="frame" x="146.5" y="157" width="82" height="30"/>
+                                <state key="normal" title="Fetch Rates"/>
+                                <connections>
+                                    <action selector="fetchRates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtj-en-ZTf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EUR" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-Hb-5ZO">
+                                <rect key="frame" x="139" y="110" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aED-iV-fDs">
+                                <rect key="frame" x="110" y="68" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert This!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZR3-pn-rLM">
+                                <rect key="frame" x="110" y="31" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 USD = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-st-faI">
+                                <rect key="frame" x="27" y="68" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hbz-Hb-5ZO" firstAttribute="centerX" secondItem="alo-Zt-Sie" secondAttribute="centerX" id="6jY-6D-8PQ"/>
+                            <constraint firstItem="ZR3-pn-rLM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="PPh-n1-hQb"/>
+                            <constraint firstItem="alo-Zt-Sie" firstAttribute="top" secondItem="hbz-Hb-5ZO" secondAttribute="bottom" constant="17" id="SoA-nL-ViI"/>
+                            <constraint firstItem="ZR3-pn-rLM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="VKv-Tn-8rQ"/>
+                            <constraint firstItem="h7K-st-faI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="VN4-GN-HBT"/>
+                            <constraint firstItem="aED-iV-fDs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YpO-fd-Nfc"/>
+                            <constraint firstItem="h7K-st-faI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="lXJ-QQ-t4J"/>
+                            <constraint firstItem="hbz-Hb-5ZO" firstAttribute="top" secondItem="aED-iV-fDs" secondAttribute="bottom" constant="21" id="n9b-ef-3aC"/>
+                            <constraint firstItem="alo-Zt-Sie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhp-2l-6IL"/>
+                            <constraint firstItem="ZR3-pn-rLM" firstAttribute="leading" secondItem="aED-iV-fDs" secondAttribute="leading" id="pct-pl-oGa"/>
+                            <constraint firstItem="ZR3-pn-rLM" firstAttribute="trailing" secondItem="hbz-Hb-5ZO" secondAttribute="trailing" id="rCv-ru-CYC"/>
+                            <constraint firstItem="hbz-Hb-5ZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="ryy-rm-YKf"/>
+                            <constraint firstItem="h7K-st-faI" firstAttribute="baseline" secondItem="aED-iV-fDs" secondAttribute="baseline" id="xUK-pu-Nl6"/>
+                            <constraint firstItem="aED-iV-fDs" firstAttribute="leading" secondItem="h7K-st-faI" secondAttribute="trailing" constant="16" id="xZr-S2-Ybj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="conversionLBL" destination="aED-iV-fDs" id="bfx-Ib-nnU"/>
+                        <outlet property="currencyTF" destination="hbz-Hb-5ZO" id="g9s-Fc-I8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-180" y="-6"/>
         </scene>
     </scenes>
 </document>

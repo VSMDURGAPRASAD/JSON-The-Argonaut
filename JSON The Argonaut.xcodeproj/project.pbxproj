@@ -14,6 +14,7 @@
 		125F80241FA916D7007E2E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125F80221FA916D7007E2E19 /* LaunchScreen.storyboard */; };
 		125F802F1FA916D7007E2E19 /* JSON_The_ArgonautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F802E1FA916D7007E2E19 /* JSON_The_ArgonautTests.swift */; };
 		125F803A1FA916D7007E2E19 /* JSON_The_ArgonautUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F80391FA916D7007E2E19 /* JSON_The_ArgonautUITests.swift */; };
+		125F80481FA916E9007E2E19 /* CurrencyFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F80471FA916E9007E2E19 /* CurrencyFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		125F80351FA916D7007E2E19 /* JSON The ArgonautUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JSON The ArgonautUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		125F80391FA916D7007E2E19 /* JSON_The_ArgonautUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON_The_ArgonautUITests.swift; sourceTree = "<group>"; };
 		125F803B1FA916D7007E2E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		125F80471FA916E9007E2E19 /* CurrencyFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				125F80191FA916D7007E2E19 /* AppDelegate.swift */,
 				125F801B1FA916D7007E2E19 /* ViewController.swift */,
+				125F80471FA916E9007E2E19 /* CurrencyFetcher.swift */,
 				125F801D1FA916D7007E2E19 /* Main.storyboard */,
 				125F80201FA916D7007E2E19 /* Assets.xcassets */,
 				125F80221FA916D7007E2E19 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125F80481FA916E9007E2E19 /* CurrencyFetcher.swift in Sources */,
 				125F801C1FA916D7007E2E19 /* ViewController.swift in Sources */,
 				125F801A1FA916D7007E2E19 /* AppDelegate.swift in Sources */,
 			);
